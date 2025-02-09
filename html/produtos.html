@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/produtos.css">
+    <title>Produtos</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <input type="checkbox" id="toggle" />
+            <label class="button" for="toggle">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="clientes.html">Clientes</a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="/index.html">Menu principal</a></li>
+                    </ul>
+                </nav>
+            </label>
+            <img src="../arquivos/logo.jpg" alt="logo" class="logo">
+            <div class="cart-icon" onclick="toggleCartModal()">
+                <img src="/arquivos/istockphoto-1206806317-612x612.jpg" alt="Carrinho">
+            </div>
+        </div>
+        <h1>Produtos</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="product-list">
+                <!-- Lista de produtos -->
+                <div class="product">
+                    <img src="/arquivos/coleira.jpg" alt="coleira para Cachorro" class="product-image">
+                    <h3>Coleira Personalizada</h3>
+                    <p>Coleira Personalizada Com Nome Telefone Para Cachorro Cães Pet Peitoral Colete Identificação (Vermelho, G) 1</p>
+                    <p id="card-price">price: R$ 137,00</p>
+                    <button onclick="addToCart('Coleira Personalizada', 137.00)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <img src="/arquivos/proplan.jpg" alt="saco de racao" class="product-image">
+                    <h3>Ração de Cachorro</h3>
+                    <p>Ração Nestlé Purina Pro Plan para Cães Adultos Raças Médias</p>
+                    <p id="card-price">price: R$ 356,39</p>
+                    <button onclick="addToCart('Saco de racao', 356.39)">Adicionar ao Carrinho</button>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="toggleCartModal()">&times;</span>
+            <h3>Carrinho</h3>
+            <ul id="cart-items">
+                <!-- Itens do carrinho serão adicionados aqui -->
+            </ul>
+            <p id="total-price">Total: R$ 0,00</p>
+            <button onclick="clearCart()">Limpar Carrinho</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 My Website</p>
+    </footer>
+    <script src="../js/produtos.js"></script>
+</body>
+</html>
