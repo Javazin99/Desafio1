@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Petshop</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <input type="checkbox" id="toggle" />
+            <label class="button" for="toggle">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="html/clientes.html">Clientes</a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="html/produtos.html">Produtos</a></li>
+                    </ul>
+                </nav>
+            </label>
+            <img src="arquivos/logo.jpg" alt="logo" class="logo" style="width: 150px; height: auto; position: relative; top: 10px;">
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h1>Informações Gerais</h1>
+            <p>Bem-vindo ao nosso petshop! Aqui você encontra tudo o que precisa para cuidar do seu pet.</p>
+            <img src="arquivos/logo.jpg" alt="Logo do Petshop" class="logo" style="width: 150px; height: auto; position: relative; top: 10px;">
+        </section>
+        <section>
+            <h2>Cadastro de Clientes</h2>
+            <form id="client-form">
+                <h3>Dados do Tutor</h3>
+                <label for="tutor-name">Nome:</label>
+                <input type="text" id="tutor-name" required>
+                <label for="tutor-phone">Telefone:</label>
+                <input type="tel" id="tutor-phone" required>
+                <label for="tutor-address">Endereço:</label>
+                <input type="text" id="tutor-address" required>
+                <label for="appointment-date">Data do Atendimento:</label>
+                <input type="date" id="appointment-date" required>
+                <h3>Dados do Animal</h3>
+                <label for="pet-name">Nome:</label>
+                <input type="text" id="pet-name" required>
+                <label for="pet-age">Idade:</label>
+                <input type="number" id="pet-age" required>
+                <label for="pet-size">Porte:</label>
+                <select id="pet-size" required>
+                    <option value="pequeno">Pequeno</option>
+                    <option value="medio">Médio</option>
+                    <option value="grande">Grande</option>
+                </select>
+                <button type="submit" onclick="saveALL()">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 My Website</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
